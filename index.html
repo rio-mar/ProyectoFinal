@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Letras encantadas</title>
+
+    
+</head>
+<body>
+    
+<!--Barra de busqueda-->
+<div class="head container ">
+
+
+    <div class="logo">
+        <a href="#"><img id="logo" src="img/img_nav.webp" alt="libro">Letras encantadas</a>
+        
+    </div>
+    <div>
+
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#favoritos">Favoritos</a>
+        <a href="#citas">Citas</a>
+        <a href="#planes">Planes</a>
+        <a href="#registrate">Regístrate</a>
+    </nav>
+</div>
+</div>
+
+<header id="inicio" class="contenido header">
+
+    <h1 class="titulo_principal title">Letras encantadas</h1>
+
+</header>
+
+<main >
+    <!--seccion nosostros-->
+    
+    <section id="nosotros" class="contenido nosotros">
+
+        <h2 class="title" style="margin-top: 40px;">Nosotros</h2>
+
+        <div class="contenedor_nosotros">
+
+
+
+        <img  src="img/imagen_nosotros.png" alt="">
+
+        <div>
+           
+            <p>
+                Bienvenidos a Letras Encantadas, la librería digital más grande del mundo. Estamos aquí para desatar la magia de las palabras y conectar personas a través de historias únicas. Nuestro objetivo es brindar un acceso sin precedentes a una vasta colección de libros digitales, permitiendo a nuestros usuarios sumergirse en un universo de literatura sin límites.
+            </p>
+            <p>
+                En Letras Encantadas, creemos en la importancia de la lectura como una fuente inagotable de conocimiento, entretenimiento y crecimiento personal. Nuestra plataforma ha sido cuidadosamente diseñada para ofrecer una experiencia excepcional, donde los amantes de la lectura pueden descubrir nuevas obras, explorar géneros diversos y sumergirse en aventuras inolvidables.
+            </p>
+            
+            
+            <p>
+                <!--boton de registro-->
+            <a href="#registrate"><button type="button" class="my-button" >Saber más</button></a>
+            </p>
+
+        </div>
+        
+    </div>
+    
+        
+    </section>
+   
+        <section id="caracteristicas" class="contenido caracteristicas">
+        
+            <h2 class="title">Caracteristicas</h2>
+        
+            <!-- caracteristicas-->
+        
+            <div class="box-contenedor">
+        
+                <div class="box">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    
+                    <h3>Interacción global</h3><br>
+                    
+                    <p>Letras Encantadas no solo se trata de leer libros, sino también de conectar a personas de todo el mundo. Nuestra plataforma fomenta la interacción entre lectores y descubrir nuevas perspectivas culturales a través de la literatura.</p>
+            
+                    
+                
+                </div>
+                    
+                <div class="box">
+                    <i class="fa-solid fa-landmark"></i>
+                    <h3>Amplio alcance</h3><br>
+                    <p>Con una colección que abarca desde clásicos literarios hasta los últimos lanzamientos, Letras Encantadas se enorgullece de ser la librería digital más grande del mundo. No importa qué género te apasione o qué tipo de lectura estés buscando, ¡aquí encontrarás algo que te encantará!</p>
+                </div>
+                    
+                
+                    
+                    
+                
+                
+            </div>
+            
+    </section>
+
+    <!--galeria de imagenes-->
+    <section id="favoritos" class="contenido favoritos">
+
+        <h2 class="title">Favoritos</h1>
+
+        <div  class="contenedorimg">
+
+            <!--libros-->
+            <div class="myslides fade">
+                <img style=
+                "width: 50%; height: 30%; object-fit: cover;" src="img/Libros_muestra/Catch the wind.jfif" alt="Catch the wind">
+            </div>
+            <div class="myslides fade">
+                <img style=
+                "width: 50%; height: 30%; object-fit: cover;" src="img/Libros_muestra/groundedforalleternity.jfif" alt="grounded for all eternity">
+            </div>
+            
+            <div class="myslides fade">
+                <img style=
+                "width: 50%; height: 30%; object-fit: cover;" src="img/Libros_muestra/Thelastdaughther.jfif" alt="The last daughther">
+            </div>
+            
+
+
+            <!--pasar imagenes-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="elementos">
+                <span class="quadrate" onclick="currentSlide(1)"></span>
+                <span class="quadrate" onclick="currentSlide(2)"></span>
+                <span class="quadrate" onclick="currentSlide(3)"></span>
+                
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+    <!--seccion de citas-->
+    <section id="citas" class="contenido Citas">
+
+        <article class="box">
+            <h2 class="title">Citas de libros</h2>
+            
+            <!--Para los mensajes Aleatorios-->
+            <div class="box-contenedor">
+                
+
+                <div class="box grande">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Citas Aleatorias</h3><br><br>
+                    <div id="cita"></div><br>
+                    <div id="autor"></div><br>
+                    <div id="libro"></div><br>
+                </div>  
+            </div>
+                
+                
+                
+        </article>
+
+
+
+    </section>
+
+
+    <!--tabla de precios conectada a API-->
+        
+    <section id="planes" class="contenido plan">
+
+        <article class="texto">
+            <h2 class="title">Planes</h2>
+            <p >En Letras Encantadas, creemos en hacer que la lectura sea accesible para todos. Nuestros planes de suscripción han sido diseñados cuidadosamente para ofrecerte opciones flexibles y asequibles, adaptadas a tus preferencias y necesidades literarias. Explora nuestros planes a continuación:
+            </p>
+        </article>
+        <!--Tabla-->
+        <div class="box-contenedor">
+            
+            <div id="box">
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Valor en dolares</th>
+                            <th>Valor en euros</th>
+                            <th>Valor en yenes</th>
+                            <th>Valor en bolivares</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="basico">Basico</td>
+                            <td id="dolarBasico"></td>
+                            <td id="euroBasico"></td>
+                            <td id="yenBasico"></td>
+                             <td id="basic"></td>
+                        </tr>
+                        <tr>
+                            <td id="basico">Premium</td>
+                            <td id="dolarPremium"></td>
+                            <td id="euroPremium"></td>
+                            <td id="yenPremium"></td>
+                            <td id="premium"></td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div style="width: 100px; height: 50px;" id="box">
+                
+            </div>
+            <div id="box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Taza dolar</th>
+                            <th>Taza euro </th>
+                            <th>Taza yenes</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td id="dolar"></td>
+                                <td id="euro">Valor euro</td>
+                                <td id="yen">Valor yenes</td>
+                            </tr>
+                        </tbody>
+
+                    </thead>
+                </table>
+            </div>
+            
+                
+        
+        
+    </section>
+
+    <!--Seccion de registrate-->
+    <section id="registrate" class="contenido subscribete">
+
+        <h2 class="title ajuste">Libros ilimitados y mucho mas</h2>
+        <p>¡Déjanos hechizar tu mundo con las letras! Completa el formulario a continuación para obtener más información sobre nuestros planes de suscripción y descubrir cómo puedes formar parte de nuestra comunidad global de lectores. ¡Únete a nosotros y descubre un universo de historias encantadoras!</p>
+
+        
+        
+            
+        
+        
+        <a href="login.html"><button type="button" class="my-button" >Registrate</button></a>
+
+
+        
+
+        
+    </section>
+    <script src="js/index.js" ></script>
+    <script src="js/carruzel.js"></script>
+    <script src="js/cambiodemoneda.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</main>
+<footer>
+    <i class="fa-solid fa-book-open"></i>
+    <h2>Universidad Bicentenaria de Aragua </h2>
+        <h2>Hecho por: Juan Fenández y María Ríos</h2>
+    </p>
+    
+
+</footer>
+</body>
+</html>

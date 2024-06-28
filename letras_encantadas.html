@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras encantadas</title>
+    <link rel="stylesheet" href="css/styles_letrasencantadas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <aside>
+        <header>
+            <h1 class="logo">Letras encantadas</h1>
+        </header>
+
+        <nav>
+            <h2 class="subtitulo">Categorias</h2>
+            <ul>
+                <li>
+                    <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los libros</button>
+                </li>
+                <li>
+                    <button id="nuevo" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Nuevos</button>
+                </li>
+                <li>
+                    <button id="popular" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Populares</button>
+                </li>
+                <li>
+                    <button id="ciencia ficcion" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Ciencia ficción</button>
+                </li>
+                <li>
+                    <button id="drama" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Drama</button>
+                </li>
+                <li>
+                    <button id="fantasia" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Fantasia</button>
+                </li>
+                <li>
+                    <button id="historia" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Historia</button>
+                </li>
+                <li>
+                    <button id="infantil" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Infantil</button>
+                </li>
+                 <li>
+                    <button id="misterio" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Misterio</button>
+                </li>
+                <li>
+                    <button id="poesia" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Poesia</button>
+                </li>
+
+                <li>
+                    <button id="romance" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Romance</button>
+                </li>
+                <li>
+                    <a href="Tulista.html" class="boton-menu boton-tulista">
+                        <i class="bi bi-card-list"></i>Tu lista <span id="numerito" class="numerito">0</span>
+                    </a>
+                    <a href="index.html"class="boton-menu boton-tulista">   <i class="bi bi-door-closed"></i>Cerrar sesión</a>   
+                </li>
+
+            </ul>
+        </nav>
+         
+        
+    </aside>
+
+    <main>
+        <h2 id="titulo-principal"    class="titulo-principal">Catálogo de libros</h2>
+        <div id="contenedor-libros" class="contenedor-libros">
+           
+                    <!--El codigo que se encuentra dentro de este div sera ingresado a traves de javascript-->
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/Libros.js"></script>
+<script src="js/Tulista.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<footer class="texto-footer">© 2024 Letras Encantadas </footer>
+</body>
+</html>

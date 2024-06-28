@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #420C14;
+    --clr-main-light: #da8993;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.95rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.wrapper{
+    display: grid;
+    
+    grid-template-columns: 1fr 4fr;
+    background-color:var(--clr-main) ;
+
+}
+
+aside{
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo{
+    font-weight:400 ;
+    font-size: 1.3rem;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.boton-menu.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
+}
+
+.boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
+.boton-menu > i.bi-hand-index-thumb-fill,
+.boton-menu > i.bi-hand-index-thumb {
+    transform: rotateZ(90deg);
+}
+
+.boton-tulista{
+    margin-top: 2rem;
+    
+}
+
+.numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.libro-agregar.active .numerito {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+
+
+
+ 
+
+
+.texto-footer{
+    color:var(--clr-main-light);
+
+
+}
+main{
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+
+}
+.titulo-principal{
+    color: var(--clr-white);
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: var(--clr-main);
+    border-radius: 1rem;
+    padding: 4px;
+
+}
+.subtitulo{
+    color: var(--clr-white);
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 4px;
+    justify-content: start;
+    
+}
+.contenedor-libros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+}
+.libro-imagen{
+    max-width:100% ;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.libro-detalles{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.libro-titulo{
+    font-size: 0.8rem;
+}
+.libro-agregar {
+    border: 0;
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-white);
+    transition: background-color .2s, color .2s;
+}
+.libro-agregar:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+/*Tu lista*/
+
+
+.contenedor-tulista {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1.5rem;
+}
+
+.Tulista-vacia{
+    color: var(--clr-main);
+    
+}
+
+.Tulista-libros {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Tulista-libro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray);
+    color: var(--clr-main);
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+.Tulista-libro-imagen {
+    width: 6rem;
+    border-radius: 1rem;
+}
+
+/* .Tulista-libro small {
+    font-size: .75rem;
+} */
+
+.Tulista-libro-eliminar {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+    cursor: pointer;
+}
+.Tulista-libro-eliminar:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+
+.Tulista-acciones {
+    display: flex;
+    justify-content: center;
+}
+
+.Tulista-acciones-vaciar {
+    border: 0;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.Tulista-acciones-izquierda{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    padding: 1rem;
+}
+.Tulista-acciones-vaciar:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.header-mobile {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.disabled {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 675px) {
+    .contenedor-libros {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        position: fixed;
+        z-index: 9;
+        background-color: var(--clr-main);
+        left: 0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s;
+    }
+
+    .aside-visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .boton-menu.active::before,
+    .boton-menu.active::after {
+        display: none;
+    }
+
+    main {
+        margin: 1rem;
+        margin-top: 0;
+        padding: 2rem;
+    }
+
+    .contenedor-libros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-mobile {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-mobile .logo {
+        color: var(--clr-gray);
+    }
+
+    .open-menu, .close-menu {
+        background-color: transparent;
+        color: var(--clr-gray);
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .tulista-libro {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: .5rem;
+    }
+
+    .tulista-acciones {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .contenedor-libros {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+footer{
+    background: #420C14;
+    padding: 60px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
